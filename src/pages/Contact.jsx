@@ -27,7 +27,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      const recipient = 'aec.ece.hrithikgupta.2024.123@gmail.com'; // Replace with the recipient's email address
+      const recipient = 'hrithikgupta52@gmail.com'; // Replace with the recipient's email address
       let redirectUrl = '';
 
       const domain = getEmailDomain(formUserEmail);

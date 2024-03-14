@@ -171,13 +171,13 @@ function App() {
           <Background />
           <main className="relative md:container mx-auto font-QuicksandNew px-5 lg:px-44 ">
             <Home isDarkTheme={isDarkTheme} />
-            <hr className="opacity-15" />
+            <hr className=" dark:opacity-15 " />
             <About />
-            <hr className="opacity-15" />
+            <hr className=" dark:opacity-15 " />
             <Experience />
-            <hr className="opacity-15" />
+            <hr className=" dark:opacity-15 " />
             <Projects />
-            <hr className="opacity-15" />
+            <hr className=" dark:opacity-15 " />
             <Contact />
           </main>
         </section>
