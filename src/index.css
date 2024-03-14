@@ -1,0 +1,21 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *{
+    border: 1px solid white;
+} */
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(../src/assets/fonts/Outfit.ttf);
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(../src/assets/fonts/Quicksand.ttf);
+}
