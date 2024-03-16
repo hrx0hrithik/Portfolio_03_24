@@ -11,6 +11,37 @@ const Home = ({ isDarkTheme }) => {
 
   }, [isDarkTheme])
 
+  // const handleCvDownload = async () => {
+  //   try {
+  //     const { default: cvFile } = await import('../assets/Hrithik Gupta_CV_compressed.pdf'); 
+  //     const link = document.createElement('a');
+  //     link.href = cvFile;
+  //     link.download = 'Hrithik Gupta CV.pdf';
+  //     document.body.appendChild(link);
+  //     link.click();
+  //     document.body.removeChild(link);
+  //   } catch (error) {
+  //     console.error('Error loading CV file:', error);
+  //   }
+  // };
+  const handleCvDownload = async () => {
+    try {
+      const module = await import('../assets/Hrithik Gupta_CV_compressed.pdf');
+      const cvFile = module.default;
+  
+      // Now you can use cvFile as needed, such as creating a download link
+      const link = document.createElement('a');
+      link.href = cvFile;
+      link.download = 'Hrithik Gupta CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error loading CV file:', error);
+    }
+  };
+  
+
   return (
     <div className='flex flex-col-reverse sm:flex-row sm:justify-between justify-evenly min-w-full sm:h-[90vh] h-[90dvh]'>
       <div className=' sm:max-w-[50%] flex flex-col justify-center sm:items-start items-center'>
@@ -20,7 +51,7 @@ const Home = ({ isDarkTheme }) => {
         <div className=' flex justify-between max-w-[65%]'>
           <button
             className='  bg-yellow-400 hover:border  text-base text-black hover:text-white flex justify-center items-center px-5 py-2 rounded-full hover:cursor-pointer mr-2'
-            onClick={() => (console.log("CV"))}
+            onClick={handleCvDownload}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="transparent" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
