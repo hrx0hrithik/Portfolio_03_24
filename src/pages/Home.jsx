@@ -13,10 +13,10 @@ const Home = ({ isDarkTheme }) => {
   
 
   return (
-    <div className='flex flex-col-reverse sm:flex-row justify-between min-w-full sm:h-[90vh] h-[80dvh]'>
+    <div className='flex flex-col-reverse sm:flex-row sm:justify-between justify-evenly min-w-full sm:h-[90vh] h-[90dvh]'>
       <div className=' sm:max-w-[50%] flex flex-col justify-center sm:items-start items-center'>
         <div className=' sm:mb-14 sm:mt-0 mt-5 my-6 max-w-[80%]'>
-          <p className=' sm:text-[64px] text-[26px] font-OutfitNew leading-none font-bold '>Converting Ideas Into Dynamic Web Solutions.</p>
+          <p className=' sm:text-[64px] text-[46px] dark:text-white text-[#444444] font-OutfitNew leading-none font-bold '>Converting Ideas Into Dynamic Web Solutions.</p>
         </div>
         <div className=' flex justify-between max-w-[65%]'>
           <button
@@ -53,13 +53,13 @@ const Home = ({ isDarkTheme }) => {
         </div>
       </div>
       <div className='relative flex items-center justify-center'>
-        <div className=' relative -top-1'>
+        <div className=' relative sm:-top-1 mt-2'>
 
-          <svg className=' absolute -top-[8px] sm:-top-[15px] -left-[8px] sm:-left-[15px] sm:h-[430px] sm:w-[430px] h-[215px] w-[215px] stroke-[6px] sm:stroke-[12px]' xmlns="http://www.w3.org/2000/svg">
+          <svg className=' absolute -top-[8px] sm:-top-[15px] -left-[8px] sm:-left-[15px] sm:h-[430px] sm:w-[430px] h-[265px] w-[265px] stroke-[8px] sm:stroke-[12px]' xmlns="http://www.w3.org/2000/svg">
             <circle r="47%" cx="50%" cy="50%" fill="transparent" stroke="#FFAD00" />
           </svg>
 
-          <svg className=' h-[200px] w-[200px] sm:h-[400px] sm:w-[400px]' xmlns="http://www.w3.org/2000/svg">
+          <svg className=' h-[250px] w-[250px] sm:h-[400px] sm:w-[400px]' xmlns="http://www.w3.org/2000/svg">
             <defs>
               <mask id="imgMask">
                 <circle r='46%' cx='50%' cy='50%' fill="white" />
@@ -76,13 +76,14 @@ const Home = ({ isDarkTheme }) => {
               mask="url(#imgMask)" // Apply the mask to the image
               alt="My Image"
             />
+            {/* Mobile devices */}
             <image
               className=' block sm:hidden'
               xlinkHref={ProfilePic} // Set the image source
-              x={2}
-              y={0}
-              width={190} // Set the width of the image
-              height={195} // Set the height of the image
+              x={6}
+              y={4}
+              width={240} // Set the width of the image
+              height={245} // Set the height of the image
               mask="url(#imgMask)" // Apply the mask to the image
               alt="My Image"
             />

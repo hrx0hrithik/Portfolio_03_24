@@ -147,28 +147,6 @@ const projects = [
       source_code_link: "https://github.com/hrx0hrithik/game-pingpong",
       hosted_site_link: "https://bejewelled-zabaione-97d09c.netlify.app/",
     },
-    {
-      name: "Ping Pong game2",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "vanilla_js",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "html",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: PingpongGame,
-      source_code_link: "https://github.com/hrx0hrithik/game-pingpong",
-      hosted_site_link: "https://bejewelled-zabaione-97d09c.netlify.app/",
-    },
   ];
 
 export { technologies, experiences, projects };

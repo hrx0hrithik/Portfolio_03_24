@@ -5,7 +5,7 @@ import { projects } from '../data/data'
 const Projects = () => {
   return (
     <section id='project' className=' min-h-[70vh] sm:pt-1'>
-        <h1 className='underline underline-offset-2 text-[28px] font-medium text-center my-4'>Projects</h1>
+        <h1 className='underline underline-offset-2 text-4xl font-semibold text-center my-4'>Projects</h1>
         <div className=' flex flex-wrap justify-center min-w-[100%] my-2'>
           {projects.map((project, index) => (
             <ProjectCards 

@@ -20,7 +20,7 @@ const Experience = () => {
 
     return (
         <section id='experience' className=' flex flex-col flex-wrap sm:flex-row justify-between items-start min-h-[70vh] relative'>
-            <h1 className=' w-full my-2 underline underline-offset-2 text-[28px] font-medium text-center'>Experience</h1>
+            <h1 className=' w-full sm:my-3 mt-4 underline underline-offset-2 text-3xl font-semibold sm:text-center'>Experience</h1>
             <div className="flex flex-col sm:flex-row ">
                 <div className='flex flex-1 sm:justify-start justify-center items-start max-h-96 '>
                     <img className=' max-h-[100%]' src={LaptopImg} alt="3D Laptop" />
@@ -40,8 +40,8 @@ const Experience = () => {
                 </div>
             </div>
             {/* Skills */}
-            <div className=' sm:w-[100%] sm:mb-12'>
-                <h1 className=' underline underline-offset-2 mb-4 text-[28px] font-medium text-start sm:text-center'>Skills</h1>
+            <div className=' sm:w-[100%]'>
+                <h1 className=' underline underline-offset-2 mb-4 text-3xl font-semibold text-center'>Skills</h1>
                 <div className='flex flex-wrap justify-between sm:hidden'>
                     <div className=' flex flex-col justify-center items-center'>
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 48 48">

@@ -4,10 +4,6 @@ import ToggleButton from "./ToggleButton";
 const Navbar = ({ menuIsOpen, setMenuIsOpen, scrolling ,isDarkTheme, setIsDarkTheme}) => {
   const [activeSection, setActiveSection] = useState(null);
 
-  // console.log("Menu ->", menuIsOpen)
-  // console.log("scrolling -> ",scrolling)
-  // console.log(activeSection)
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
@@ -45,13 +41,11 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen, scrolling ,isDarkTheme, setIsDarkTh
     }
   };
 
-
   return (
-
-    <nav className="md:container sm:mx-auto px-5 lg:px-44 flex items-center justify-between min-w-full sm:h-20 h-14 z-20 sticky top-0 dark:text-white text-[#161513] font-QuicksandNew ">
-      <div className={`absolute top-0 left-0 w-full sm:h-20 h-14  ${scrolling ? " bg-slate-300/15 drop-shadow-sm backdrop-filter backdrop-blur-lg" : " drop-shadow-sm sm:drop-shadow-none sm:bg-transparent bg-slate-300/15"} `}></div>
+    <nav className="md:container sm:mx-auto px-5 lg:px-44 flex items-center justify-between min-w-full sm:h-20 h-14 z-20 sticky top-0 dark:text-white text-[#444444] font-QuicksandNew ">
+      <div className={`absolute top-0 left-0 w-full sm:h-20 h-14  ${scrolling ? " bg-slate-300/15 drop-shadow backdrop-filter backdrop-blur-lg" : " drop-shadow-sm sm:drop-shadow-none sm:bg-transparent bg-slate-300/15"} `}></div>
       <div className="z-20 flex items-center">
-        <span className=" sm:text-[32px] font-semibold">PORTFOLIO</span>
+        <p className=" sm:text-[32px] font-semibold drop-shadow-md filter-none ">PORTFOLIO</p>
       </div>
       <div className=' relative'>
         <button className='block sm:hidden' onClick={() => (setMenuIsOpen(!menuIsOpen))}>
@@ -83,7 +77,7 @@ function NavLink({ active, href, menuIsOpen, children, scrollToSection, setMenuI
     }
   };
 
-  const navLinkClassName = `${menuIsOpen ? " py-2 text-center hover:bg-slate-500/50" : " px-3"} ${active ? 'font-bold' : 'hover:underline underline-offset-4'}`;
+  const navLinkClassName = ` ${menuIsOpen ? " py-2 text-center hover:bg-slate-500/50" : " px-3"} ${active ? 'font-extrabold' : 'hover:underline underline-offset-4 font-medium'}`;
   const yellowBarClassName = `absolute -bottom-[2px] bg-yellow-300 w-4 h-1 rounded-full ${active ? '' : 'hidden'} ${menuIsOpen ? "hidden" : ""}`;
 
   return (

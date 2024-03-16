@@ -69,12 +69,10 @@ ${formUsername}`
     }
   };
 
-  // console.log(formUserEmail)
-
   return (
-    <section id='contact' className='flex sm:flex-col sm:justify-center sm:min-h-[70vh]'>
+    <section id='contact' className='flex sm:flex-col sm:justify-center sm:min-h-[70vh] z-10'>
       <div className='sm:w-1/2 w-full'>
-        <h2 className="text-2xl font-bold mb-8">Contact Me</h2>
+        <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
         <div className='dark:bg-slate-300/15 bg-slate-300/60 rounded-md p-5 my-2 flex flex-col gap-2'>
           <form onSubmit={handleSubmit}>
             <div className=' my-6'>
@@ -116,6 +114,7 @@ ${formUsername}`
                 className='w-full px-4 py-2 text-black bg-white dark:text-white dark:bg-[#3c3c3c] border border-gray-300 rounded focus:outline-none focus:border-blue-500'
                 id="message"
                 placeholder='Message'
+                rows={5}
                 required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -123,7 +122,7 @@ ${formUsername}`
             </div>
             <div className='flex justify-end'>
               <button
-                className="bg-yellow-400 text-black mt-5 w-fit px-4 py-2 rounded-full hover:bg-yellow-500 focus:outline-none focus:border-2 focus:border-blue-500"
+                className="bg-yellow-400 text-black sm:mt-5 w-fit px-4 py-2 rounded-full hover:bg-yellow-500 focus:outline-none focus:border-2 focus:border-blue-500"
                 type="submit"
               >
                 Send&nbsp;Email
