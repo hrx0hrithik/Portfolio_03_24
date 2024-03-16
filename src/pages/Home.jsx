@@ -61,7 +61,7 @@ const Home = ({ isDarkTheme }) => {
           <button
             className='border border-yellow-400 hover:border-black hover:bg-yellow-400 text-base dark:text-white hover:text-black hidden sm:flex justify-center items-center  px-5 py-2 rounded-full cursor-pointer'
             onClick={() => (
-              window.open('https://www.linkedin.com/in/hrithik-gupta-7314b6203/')
+              window.open('https://www.linkedin.com/in/hrithik-gupta-7314b6203/', '_blank')
             )}
             onMouseOver={() => (
               document.getElementById("linkIcon").style.fill = "#000000"
