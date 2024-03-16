@@ -22,11 +22,11 @@ const ProjectCards = ({ name, description, image, index, source_code_link, hoste
         </div>
         <div className=' flex justify-center sm:my-0 my-4 sm:h-12 sm:text-xl'>
           <button
-            onClick={() => (location.href = { hosted_site_link })}
+            onClick={() => (window.open = { hosted_site_link })}
             className=' border rounded-full px-4 py-2 mx-4 dark:hover:bg-slate-100 bg-white dark:text-black'
           >Visit&nbsp;&#x1F517;</button>
           <button
-            onClick={() => (location.href = { source_code_link })}
+            onClick={() => (window.open = { source_code_link })}
             className='border-2 border-transparent hover:border-white rounded-full px-4 py-2 mx-4 bg-transparent dark:text-white'
           >Github&nbsp;&rarr;</button>
         </div>

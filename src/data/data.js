@@ -19,11 +19,11 @@ import {
 
 const technologies = [
     {
-      name: "HTML 5",
+      name: "HTML",
       icon: html,
     },
     {
-      name: "CSS 3",
+      name: "CSS",
       icon: css,
     },
     {
@@ -72,10 +72,10 @@ const experiences = [
       iconBg: "#fefefe",
       date: "May 2023 - July 2023",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Traning on Backend Development in NodeJS.",
+        "HandsOn practice with fs and multer for file handaling",
+        "Individual Full-stack projects on MERN stack.",
+        "Project :- Hotel Booking System",
       ],
     },
   ];

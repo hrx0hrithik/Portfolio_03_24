@@ -8,7 +8,7 @@ const Ball = (props) => {
 
   return (
     <Float speed={1.25} rotationIntensity={1} floatIntensity={2} >
-      <ambientLight intensity={0.25} />
+      <ambientLight intensity={props.isDarkTheme ? 0.25 : 1.95} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75} >
         <icosahedronGeometry args={[1, 1]} />
@@ -29,7 +29,8 @@ const Ball = (props) => {
   )
 }
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas = ({ icon, isDarkTheme }) => {
+
   return (
     <Canvas frameloop='always' gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<Html>
@@ -44,7 +45,7 @@ const BallCanvas = ({ icon }) => {
         >Loading ... %</p>
       </Html>}>
         <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
+        <Ball imgUrl={icon} isDarkTheme={isDarkTheme} />
       </Suspense>
 
       <Preload all />

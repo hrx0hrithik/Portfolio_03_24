@@ -6,7 +6,7 @@ import ExperienceCard from '../components/ExperienceCard';
 
 const BallCanvas = lazy(() => import('../components/Ball'));
 
-const Experience = () => {
+const Experience = ({ isDarkTheme }) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
@@ -90,7 +90,7 @@ const Experience = () => {
                             {/* Render BallCanvas only for larger screens */}
                             {technologies.map((technologie) => (
                                 <div key={technologie.name} className='w-28 h-28'>
-                                    <BallCanvas icon={technologie.icon} />
+                                    <BallCanvas icon={technologie.icon} isDarkTheme={isDarkTheme} />
                                     <p className='text-center'>{technologie.name}</p>
                                 </div>
                             ))}

@@ -3,14 +3,13 @@ import ProfilePic from '../assets/Propic.jpg'
 
 const Home = ({ isDarkTheme }) => {
   useEffect(() => {
-    if( !isDarkTheme){
+    if (!isDarkTheme) {
       document.getElementById("linkIcon").style.fill = "#000000"
-    }else{
+    } else {
       document.getElementById("linkIcon").style.fill = "#ffffff"
     }
-  
+
   }, [isDarkTheme])
-  
 
   return (
     <div className='flex flex-col-reverse sm:flex-row sm:justify-between justify-evenly min-w-full sm:h-[90vh] h-[90dvh]'>
@@ -30,14 +29,16 @@ const Home = ({ isDarkTheme }) => {
           </button>
           <button
             className='border border-yellow-400 hover:border-black hover:bg-yellow-400 text-base dark:text-white hover:text-black hidden sm:flex justify-center items-center  px-5 py-2 rounded-full cursor-pointer'
-            onClick={() => (location.href = 'https://www.linkedin.com/in/hrithik-gupta-7314b6203/')}
+            onClick={() => (
+              window.open('https://www.linkedin.com/in/hrithik-gupta-7314b6203/')
+            )}
             onMouseOver={() => (
               document.getElementById("linkIcon").style.fill = "#000000"
             )}
             onMouseOut={() => (
               isDarkTheme ?
-              document.getElementById("linkIcon").style.fill = "#ffffff":
-              document.getElementById("linkIcon").style.fill = "#000000"
+                document.getElementById("linkIcon").style.fill = "#ffffff" :
+                document.getElementById("linkIcon").style.fill = "#000000"
             )}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="25 25 200 200" style={{ fill: '#000000' }}>

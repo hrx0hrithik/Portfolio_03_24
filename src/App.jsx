@@ -69,7 +69,7 @@ function App() {
             <hr className=" dark:opacity-15 " />
             <About />
             <hr className=" dark:opacity-15 " />
-            <Experience />
+            <Experience isDarkTheme={isDarkTheme} />
             <hr className=" dark:opacity-15 " />
             <Projects />
             <hr className=" dark:opacity-15 " />
