@@ -17,13 +17,13 @@ const About = () => {
         </div>
         <div className='flex'>
           <a
-            className=' hover:bg-gray-400/15 dark:hover:bg-slate-300/10'
+            className=' hover:bg-gray-400/15 dark:hover:bg-slate-300/10 rounded-3xl'
             href='https://www.instagram.com/hrithik_gupta_hrx/'
             target='_blank'
             aria-label='social media links'
           >
             <svg
-              className='px-3 cursor-pointer sm:w-24 sm:h-24 w-20 h-20 rounded-3xl'
+              className='px-3 cursor-pointer sm:w-24 sm:h-24 w-20 h-20'
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -50,13 +50,13 @@ const About = () => {
             </svg>
           </a>
           <a
-            className=' hover:bg-gray-400/15 dark:hover:bg-slate-300/10'
+            className=' hover:bg-gray-400/15 dark:hover:bg-slate-300/10 rounded-3xl'
             href='https://twitter.com/hrithik99_hrx'
             target='_blank'
             aria-label='social media links'
           >
             <svg
-              className='px-3 cursor-pointer sm:w-24 sm:h-24 w-20 h-20 rounded-3xl'
+              className='px-3 cursor-pointer sm:w-24 sm:h-24 w-20 h-20'
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -67,13 +67,13 @@ const About = () => {
             </svg>
           </a>
           <a
-            className=' hover:bg-gray-400/15 dark:hover:bg-slate-300/10'
+            className=' hover:bg-gray-400/15 dark:hover:bg-slate-300/10 rounded-3xl'
             href='https://www.facebook.com/hrithik.hrx'
             target='_blank'
             aria-label='social media links'
           >
             <svg
-              className='px-3 cursor-pointer sm:w-24 sm:h-24 w-20 h-20 rounded-3xl'
+              className='px-3 cursor-pointer sm:w-24 sm:h-24 w-20 h-20 '
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -84,13 +84,13 @@ const About = () => {
             </svg>
           </a>
           <a
-            className=' hover:bg-gray-400/15 dark:hover:bg-slate-300/10'
+            className=' hover:bg-gray-400/15 dark:hover:bg-slate-300/10 rounded-3xl'
             href='https://github.com/hrx0hrithik'
             target='_blank'
             aria-label='social media links'
           >
             <svg
-              className='px-3 cursor-pointer sm:w-24 sm:h-24 w-20 h-20 rounded-3xl'
+              className='px-3 cursor-pointer sm:w-24 sm:h-24 w-20 h-20'
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
