@@ -1,4 +1,4 @@
-
+import { motion } from "framer-motion"
 
 const ToggleButton = ({ isDarkTheme, setIsDarkTheme }) => {
 
@@ -28,4 +28,3 @@ const moonSvg = (<svg width="20px" height="20px" viewBox="0 0 24.00 24.00" fill=
 };
 
 export default ToggleButton;
-

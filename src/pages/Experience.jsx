@@ -1,4 +1,5 @@
-import React, { Suspense, lazy, useEffect, useState } from 'react'
+import React, { Suspense, lazy } from 'react'
+import { motion } from "framer-motion"
 import LaptopImg from '../assets/3d-laptop.png'
 import ReactSvg from '../assets/react.svg'
 import { technologies, experiences } from '../data/data'
@@ -6,25 +7,22 @@ import ExperienceCard from '../components/ExperienceCard';
 
 const BallCanvas = lazy(() => import('../components/Ball'));
 
-const Experience = ({ isDarkTheme }) => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+const Experience = ({ isDarkTheme, isMobile }) => {
 
     return (
         <section id='experience' className=' flex flex-col flex-wrap sm:flex-row justify-between items-start min-h-[70vh] relative'>
-            <h1 className=' w-full sm:my-3 mt-4 underline underline-offset-2 text-3xl font-semibold sm:text-center'>Experience</h1>
+            <h1 className=' w-full sm:my-3 mt-6 underline underline-offset-2 text-3xl font-semibold sm:text-center'>Experience</h1>
             <div className="flex flex-col sm:flex-row ">
-                <div className='flex flex-1 sm:justify-start justify-center items-start max-h-96 '>
+                <motion.div
+                    initial={{ opacity: 0, y: 200 }}
+                    exit={{ opacity: 0, y: 200 }}
+                    transition={{ duration: 0.6 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className='flex flex-1 sm:justify-start justify-center items-start max-h-96 '
+                >
                     <img className=' max-h-[100%]' src={LaptopImg} alt="3D Laptop" />
-                </div>
+                </motion.div>
                 <div className=' flex-1'>
                     {experiences.map((experience, index) => (
                         <div key={index} className=' my-8 text-lg'>

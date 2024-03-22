@@ -16,14 +16,16 @@ function App() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+  // For theme
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme === 'dark') {
       setIsDarkTheme(true);
     } else if (storedTheme === 'light') {
       setIsDarkTheme(false);
-    } else{
+    } else {
       setIsDarkTheme(true);
     }
 
@@ -34,6 +36,7 @@ function App() {
     }
   }, [isDarkTheme]);
 
+  // for Scroll Effect
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 40) {
@@ -47,6 +50,16 @@ function App() {
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  // for mobile responsive
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
@@ -65,15 +78,15 @@ function App() {
         >
           <Background />
           <main className="relative md:container mx-auto font-QuicksandNew px-5 lg:px-44 sm:mt-0 mt-14 ">
-            <Home isDarkTheme={isDarkTheme} />
+            <Home isDarkTheme={isDarkTheme} isMobile={isMobile} />
             <hr className=" dark:opacity-15 " />
             <About />
             <hr className=" dark:opacity-15 " />
-            <Experience isDarkTheme={isDarkTheme} />
+            <Experience isDarkTheme={isDarkTheme} isMobile={isMobile} />
             <hr className=" dark:opacity-15 " />
             <Projects />
             <hr className=" dark:opacity-15 " />
-            <Contact />
+            <Contact isMobile={isMobile} />
           </main>
         </section>
         <Footer />

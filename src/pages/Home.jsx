@@ -1,35 +1,22 @@
 import React, { useEffect } from 'react'
 import ProfilePic from '../assets/Propic.jpg'
+import { motion } from "framer-motion"
 
-const Home = ({ isDarkTheme }) => {
+const Home = ({ isDarkTheme, isMobile }) => {
+
+  // for linked button icon
   useEffect(() => {
     if (!isDarkTheme) {
       document.getElementById("linkIcon").style.fill = "#000000"
     } else {
       document.getElementById("linkIcon").style.fill = "#ffffff"
     }
-
   }, [isDarkTheme])
 
-  // const handleCvDownload = async () => {
-  //   try {
-  //     const { default: cvFile } = await import('../assets/Hrithik Gupta_CV_compressed.pdf'); 
-  //     const link = document.createElement('a');
-  //     link.href = cvFile;
-  //     link.download = 'Hrithik Gupta CV.pdf';
-  //     document.body.appendChild(link);
-  //     link.click();
-  //     document.body.removeChild(link);
-  //   } catch (error) {
-  //     console.error('Error loading CV file:', error);
-  //   }
-  // };
   const handleCvDownload = async () => {
     try {
       const module = await import('../assets/Hrithik Gupta_CV_compressed.pdf');
       const cvFile = module.default;
-  
-      // Now you can use cvFile as needed, such as creating a download link
       const link = document.createElement('a');
       link.href = cvFile;
       link.download = 'Hrithik Gupta CV.pdf';
@@ -40,17 +27,25 @@ const Home = ({ isDarkTheme }) => {
       console.error('Error loading CV file:', error);
     }
   };
-  
 
   return (
     <div className='flex flex-col-reverse sm:flex-row sm:justify-between justify-evenly min-w-full sm:h-[90vh] h-[90dvh]'>
-      <div className=' sm:max-w-[50%] flex flex-col justify-center sm:items-start items-center'>
-        <div className=' sm:mb-14 sm:mt-0 mt-5 my-6 max-w-[80%]'>
+      <motion.div
+        initial={{ opacity: 0, x: -300 }}
+        exit={{ opacity: 0, x: -300 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, x: 0 }}
+        className=' sm:max-w-[50%] flex flex-col justify-center sm:items-start items-center'>
+        <div
+          className=' sm:mb-14 sm:mt-0 mt-5 my-6 max-w-[80%]'
+        >
           <p className=' sm:text-[64px] text-[46px] dark:text-white text-[#444444] font-OutfitNew leading-none font-bold '>Converting Ideas Into Dynamic Web Solutions.</p>
         </div>
-        <div className=' flex justify-between max-w-[65%]'>
+        <div className=' flex justify-between max-w-[65%]'
+        >
           <button
-            className='  bg-yellow-400 hover:border  text-base text-black hover:text-white flex justify-center items-center px-5 py-2 rounded-full hover:cursor-pointer mr-2'
+            className='  bg-yellow-400 border border-transparent hover:border-white  text-base text-black hover:text-white flex justify-center items-center px-5 py-2 rounded-full hover:cursor-pointer mr-2'
             onClick={handleCvDownload}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="transparent" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -59,7 +54,7 @@ const Home = ({ isDarkTheme }) => {
             <p className=' ml-1 font-semibold'>CV&nbsp;Download</p>
           </button>
           <button
-            className='border border-yellow-400 hover:border-black hover:bg-yellow-400 text-base dark:text-white hover:text-black hidden sm:flex justify-center items-center  px-5 py-2 rounded-full cursor-pointer'
+            className='border border-yellow-400 hover:border-yellow-400 hover:bg-yellow-400 text-base dark:text-white hover:text-black hidden sm:flex justify-center items-center  px-5 py-2 rounded-full cursor-pointer'
             onClick={() => (
               window.open('https://www.linkedin.com/in/hrithik-gupta-7314b6203/', '_blank')
             )}
@@ -83,14 +78,21 @@ const Home = ({ isDarkTheme }) => {
             <p className=' ml-1 font-semibold'>LinkedIn</p>
           </button>
         </div>
-      </div>
-      <div className='relative flex items-center justify-center'>
-        <div className=' relative sm:-top-1 mt-2'>
-
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 300 }}
+        exit={{ opacity: 0, x: 300 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, x: 0 }}
+        className='relative flex items-center justify-center' >
+        <div className=' relative sm:-top-1 mt-2'
+        >
           <svg className=' absolute -top-[8px] sm:-top-[15px] -left-[8px] sm:-left-[15px] sm:h-[430px] sm:w-[430px] h-[265px] w-[265px] stroke-[8px] sm:stroke-[12px]' xmlns="http://www.w3.org/2000/svg">
             <circle r="47%" cx="50%" cy="50%" fill="transparent" stroke="#FFAD00" />
           </svg>
 
+          {/* Image Clipping */}
           <svg className=' h-[250px] w-[250px] sm:h-[400px] sm:w-[400px]' xmlns="http://www.w3.org/2000/svg">
             <defs>
               <mask id="imgMask">
@@ -121,7 +123,7 @@ const Home = ({ isDarkTheme }) => {
             />
           </svg>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

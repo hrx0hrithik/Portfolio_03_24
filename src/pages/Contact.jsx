@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
+import { Stars } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
 
-const Contact = () => {
+const GlobeNew = lazy(() => import('../components/GlobeNew'));
+
+const Contact = ({ isMobile }) => {
   const [formUsername, setFormUsername] = useState('');
   const [formUserEmail, setFormUserEmail] = useState('');
   const [subject, setSubject] = useState('');
@@ -70,10 +74,15 @@ ${formUsername}`
   };
 
   return (
-    <section id='contact' className='flex sm:flex-col sm:justify-center sm:min-h-[70vh] z-10'>
-      <div className='sm:w-1/2 w-full'>
-        <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
-        <div className='dark:bg-slate-300/15 bg-slate-300/60 rounded-md p-5 my-2 flex flex-col gap-2'>
+    <section id='contact' className='sm:min-h-[80vh] my-3 relative overflow-hidden'>
+      <div className=" absolute inset-0 z-0 dark:block hidden">
+        <Canvas>
+          <Stars radius={100} depth={100} count={5000} factor={5} saturation={0} fade speed={2} />
+        </Canvas>
+      </div>
+      <h2 className="text-3xl font-bold mb-8 z-10">Contact Me</h2>
+      <div className='w-full flex flex-col-reverse sm:flex-row max-h-[500px] z-10 relative'>
+        <div className='dark:bg-slate-300/10 w-full sm:w-1/2 bg-slate-300/60 rounded-lg p-5 flex flex-col gap-2 backdrop-blur-sm'>
           <form onSubmit={handleSubmit}>
             <div className=' my-6'>
               <input
@@ -130,6 +139,14 @@ ${formUsername}`
             </div>
           </form>
         </div>
+        {isMobile ? null :
+          <>
+            <Suspense fallback={<div>Loading...</div>}>
+              <GlobeNew isMobile={isMobile} />
+            </Suspense>
+          </>
+        }
+
       </div>
     </section>
   );
