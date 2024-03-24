@@ -2,7 +2,6 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Decal, Float, Html, OrbitControls, Preload, useTexture } from '@react-three/drei'
 
-
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl])
 
@@ -10,7 +9,11 @@ const Ball = (props) => {
     <Float speed={1.25} rotationIntensity={1} floatIntensity={2} >
       <ambientLight intensity={props.isDarkTheme ? 0.25 : 1.95} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75} >
+      <mesh
+        castShadow
+        receiveShadow
+        scale={ 2.75 }
+      >
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color="#ffffff"
@@ -40,7 +43,7 @@ const BallCanvas = ({ icon, isDarkTheme }) => {
           style={{
             fontSize: 14,
             fontWeight: 800,
-            marginTop: 40
+            textAlign: 'center'
           }}
         >Loading ... %</p>
       </Html>}>

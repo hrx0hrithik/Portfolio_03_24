@@ -84,18 +84,18 @@ const projects = [
     {
       name: "Hotel Room Booking",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "A Full stack MERN project for hotel room booking system, make it in summer internship.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "express",
           color: "green-text-gradient",
         },
         {
-          name: "bootstrap",
+          name: "mongodb",
           color: "pink-text-gradient",
         },
       ],
@@ -106,18 +106,18 @@ const projects = [
     {
       name: "Windows 11 Clone",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "A attempt to make Windows 11 fully working clone, with plane Vanilla JS and CSS.",
       tags: [
         {
           name: "vanilla_js",
           color: "blue-text-gradient",
         },
         {
-          name: "webApi",
+          name: "css",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "html",
           color: "pink-text-gradient",
         },
       ],
@@ -128,7 +128,7 @@ const projects = [
     {
       name: "Ping Pong game",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "A attempt to make a game using Vanilla JS only, building game logic.",
       tags: [
         {
           name: "vanilla_js",
@@ -146,6 +146,28 @@ const projects = [
       image: PingpongGame,
       source_code_link: "https://github.com/hrx0hrithik/game-pingpong",
       hosted_site_link: "https://bejewelled-zabaione-97d09c.netlify.app/",
+    },
+    {
+      name: "Personal Portfolio",
+      description:
+        "Portfolio project made using React, Tailwind and using Three JS",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "green-text-gradient",
+        },
+        {
+          name: "three-js",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: PingpongGame,
+      source_code_link: "https://github.com/hrx0hrithik/Portfolio_03_24",
+      hosted_site_link: "#",
     },
   ];
 
