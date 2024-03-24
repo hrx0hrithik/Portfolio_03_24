@@ -14,6 +14,7 @@ import {
     GoYOLO,
     WindowsHome,
     PingpongGame,
+    PersonalPortfolio
   } from "../assets";
 
 
@@ -84,7 +85,7 @@ const projects = [
     {
       name: "Hotel Room Booking",
       description:
-        "A Full stack MERN project for hotel room booking system, make it in summer internship.",
+        "My first full stack MERN project for hotel room booking system, made it in summer internship.",
       tags: [
         {
           name: "react",
@@ -106,7 +107,7 @@ const projects = [
     {
       name: "Windows 11 Clone",
       description:
-        "A attempt to make Windows 11 fully working clone, with plane Vanilla JS and CSS.",
+        "An attempt to make Windows 11 fully working clone, with plane Vanilla JS and CSS.",
       tags: [
         {
           name: "vanilla_js",
@@ -128,7 +129,7 @@ const projects = [
     {
       name: "Ping Pong game",
       description:
-        "A attempt to make a game using Vanilla JS only, building game logic.",
+        "An attempt to make a game using Vanilla JS only, building game logic.",
       tags: [
         {
           name: "vanilla_js",
@@ -165,7 +166,7 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-      image: PingpongGame,
+      image: PersonalPortfolio,
       source_code_link: "https://github.com/hrx0hrithik/Portfolio_03_24",
       hosted_site_link: "#",
     },
