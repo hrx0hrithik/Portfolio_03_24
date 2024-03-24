@@ -89,7 +89,7 @@ const Experience = ({ isDarkTheme, isMobile }) => {
                             {technologies.map((technologie) => (
                                 <div key={technologie.name} className='w-28 h-28'>
                                     <BallCanvas icon={technologie.icon} isDarkTheme={isDarkTheme} />
-                                    <p className='text-center'>{technologie.name}</p>
+                                    <p className='text-center font-medium'>{technologie.name}</p>
                                 </div>
                             ))}
                         </div>

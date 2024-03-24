@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 const ExperienceCard = ({ icon, title, company_name, date, points }) => {
     return (
-        <div className='flex '>
+        <div className='flex text-[#444444] dark:text-white'>
             <div className='max-w-20 mr-4'>
                 <motion.div
                     initial={{ scale: 0 }}

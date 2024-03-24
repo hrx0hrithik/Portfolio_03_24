@@ -16,7 +16,7 @@ import celebal from "./company/celebal.jpeg";
 import GoYOLO from "./GoYOLO.png";
 import WindowsHome from "./WindowsHome.png";
 import PingpongGame from "./PingpongGame.png";
-import PersonalPortfolio from "./PersonalPortfolio.jpg";
+import PersonalPortfolio from "./PersonalPortfolio.png";
 
 export {
   javascript,

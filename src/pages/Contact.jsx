@@ -82,7 +82,7 @@ ${formUsername}`
       </div>
       <h2 className="text-3xl font-bold mb-8 z-10">Contact Me</h2>
       <div className='w-full flex flex-col-reverse sm:flex-row max-h-[500px] z-10 relative'>
-        <div className='dark:bg-slate-300/10 w-full sm:w-1/2 bg-slate-300/60 rounded-lg p-5 flex flex-col gap-2 backdrop-blur-sm'>
+        <div className='dark:bg-transparent dark:border dark:border-gray-500/50 w-full sm:w-1/2 bg-slate-400/60 rounded-lg p-5 flex flex-col gap-2 backdrop-blur-[2px]'>
           <form onSubmit={handleSubmit}>
             <div className=' my-6'>
               <input

@@ -15,7 +15,7 @@ const ProjectCards = ({ name, description, image, index, source_code_link, hoste
   const ForRightMotion = { x: 200 }
 
   return (
-    <div className={` sm:max-h-[400px] dark:text-white flex flex-col sm:flex-row justify-center rounded-3xl mx-7 my-4 relative overflow-hidden ${index >= 0 ? (bgColors[index]) : "bg-red-500"} ${isLeftAligned ? '' : 'sm:flex-row-reverse'}`}>
+    <div className={` sm:max-h-[400px] dark:text-white text-[#444444] flex flex-col sm:flex-row justify-center rounded-3xl mx-7 my-4 relative overflow-hidden ${index >= 0 ? (bgColors[index]) : "bg-red-500"} ${isLeftAligned ? '' : 'sm:flex-row-reverse'}`}>
       <motion.div
         initial={isLeftAligned ? ForLeftMotion : ForRightMotion }
         exit={isLeftAligned ? ForLeftMotion : ForRightMotion}

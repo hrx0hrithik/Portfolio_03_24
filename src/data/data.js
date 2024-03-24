@@ -52,11 +52,11 @@ const technologies = [
       icon: mongodb,
     },
     {
-      name: "git",
+      name: "Git",
       icon: git,
     },
     {
-      name: "Next js",
+      name: "Next JS",
       icon: nextjs,
     },
     {
