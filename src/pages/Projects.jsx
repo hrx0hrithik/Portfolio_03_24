@@ -13,6 +13,7 @@ const Projects = () => {
               name={project.name} 
               description={project.description} 
               image={project.image} 
+              tags={project.tags}
               index={index}
               hosted_site_link={project.hosted_site_link}
               source_code_link={project.source_code_link}

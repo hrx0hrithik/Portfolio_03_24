@@ -85,19 +85,19 @@ const projects = [
     {
       name: "Hotel Room Booking",
       description:
-        "My first full stack MERN project for hotel room booking system, made it in summer internship.",
+        "My first full stack MERN project for hotel room booking system, made it in summer internship used JWT, bycrypt, PDFkit and RazorPay. ",
       tags: [
         {
           name: "react",
-          color: "blue-text-gradient",
+          color: "blue-text",
         },
         {
           name: "express",
-          color: "green-text-gradient",
+          color: "green-text",
         },
         {
           name: "mongodb",
-          color: "pink-text-gradient",
+          color: "pink-text",
         },
       ],
       image: GoYOLO,
@@ -107,19 +107,19 @@ const projects = [
     {
       name: "Windows 11 Clone",
       description:
-        "An attempt to make Windows 11 fully working clone, with plane Vanilla JS and CSS.",
+        "An attempt to make Windows 11 fully working clone, with plane Vanilla JS and CSS, I made a working calendar and Light & Dark mode. ",
       tags: [
         {
           name: "vanilla_js",
-          color: "blue-text-gradient",
+          color: "blue-text",
         },
         {
           name: "css",
-          color: "green-text-gradient",
+          color: "green-text",
         },
         {
           name: "html",
-          color: "pink-text-gradient",
+          color: "pink-text",
         },
       ],
       image: WindowsHome,
@@ -129,19 +129,19 @@ const projects = [
     {
       name: "Ping Pong game",
       description:
-        "An attempt to make a game using Vanilla JS only, building game logic.",
+        "An attempt to make a game using Vanilla JS only, building game logic, points count, pause and play.",
       tags: [
         {
           name: "vanilla_js",
-          color: "blue-text-gradient",
+          color: "blue-text",
         },
         {
           name: "html",
-          color: "green-text-gradient",
+          color: "green-text",
         },
         {
           name: "css",
-          color: "pink-text-gradient",
+          color: "pink-text",
         },
       ],
       image: PingpongGame,
@@ -151,19 +151,19 @@ const projects = [
     {
       name: "Personal Portfolio",
       description:
-        "Portfolio project made using React, Tailwind and using Three JS",
+        "Portfolio made using React, Tailwind and using Three JS. ",
       tags: [
         {
           name: "react",
-          color: "blue-text-gradient",
+          color: "blue-text",
         },
         {
           name: "tailwind",
-          color: "green-text-gradient",
+          color: "green-text",
         },
         {
           name: "three-js",
-          color: "pink-text-gradient",
+          color: "pink-text",
         },
       ],
       image: PersonalPortfolio,

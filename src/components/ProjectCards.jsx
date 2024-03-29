@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion"
 
-const ProjectCards = ({ name, description, image, index, source_code_link, hosted_site_link }) => {
+const ProjectCards = ({ name, description, tags, image, index, source_code_link, hosted_site_link }) => {
   const isLeftAligned = index % 2 === 0;
   const bgColors = [
     "bg-gradient-to-b from-sky-50 to-amber-300 border-amber-100 dark:from-slate-900 dark:to-rose-700 dark:border-rose-800 dark:border-t",
@@ -17,7 +17,7 @@ const ProjectCards = ({ name, description, image, index, source_code_link, hoste
   return (
     <div className={` sm:max-h-[400px] dark:text-white text-[#444444] flex flex-col sm:flex-row justify-center rounded-3xl mx-7 my-4 relative overflow-hidden ${index >= 0 ? (bgColors[index]) : "bg-red-500"} ${isLeftAligned ? '' : 'sm:flex-row-reverse'}`}>
       <motion.div
-        initial={isLeftAligned ? ForLeftMotion : ForRightMotion }
+        initial={isLeftAligned ? ForLeftMotion : ForRightMotion}
         exit={isLeftAligned ? ForLeftMotion : ForRightMotion}
         transition={{ duration: 1.5, delay: 0 }}
         whileInView={{ x: 0 }}
@@ -27,7 +27,14 @@ const ProjectCards = ({ name, description, image, index, source_code_link, hoste
       <div className='px-4 sm:px-8 sm:py-4 bg-transparent relative flex flex-col justify-around sm:w-1/2'>
         <div className=' sm:mt-12 mt-2'>
           <h1 className=' sm:my-4 text-3xl font-bold'>{name}</h1>
-          <p className=' text-base '>{description}</p>
+          <p className=' text-base font-medium '>{description}</p>
+          <p className=' py-1 font-semibold'>
+            {tags.map((tag) => (
+            <span key={tag.name} className={`text-[14px] pr-2 ${tag.color}`} >
+              #{tag.name}
+            </span>
+          ))}
+          </p>
         </div>
         <div className=' flex justify-center sm:my-0 my-4 sm:h-12 sm:text-xl'>
           <button

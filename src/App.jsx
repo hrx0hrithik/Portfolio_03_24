@@ -86,7 +86,9 @@ function App() {
             <hr className=" dark:opacity-15 " />
             <Projects />
             <hr className=" dark:opacity-15 " />
-            <Contact isMobile={isMobile} />
+            <Suspense fallback = { <div> Loading... </div> } >
+              <Contact isMobile = {isMobile} />
+            </Suspense>
           </main>
         </section>
         <Footer />

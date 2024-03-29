@@ -43,7 +43,7 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen, scrolling ,isDarkTheme, setIsDarkTh
 
   return (
     <nav className="md:container sm:mx-auto px-5 lg:px-44 flex items-center justify-between min-w-full sm:h-20 h-14 z-20 sticky top-0 dark:text-white text-[#444444] font-QuicksandNew ">
-      <div className={`absolute top-0 left-0 w-full sm:h-20 h-14  ${scrolling ? " bg-slate-300/15 drop-shadow backdrop-filter backdrop-blur-lg" : " drop-shadow-sm sm:drop-shadow-none sm:bg-transparent bg-slate-300/15"} `}></div>
+      <div className={`absolute top-0 left-0 w-full sm:h-20 h-14 ${scrolling ? " bg-slate-300/15 drop-shadow backdrop-filter backdrop-blur-lg" : " drop-shadow-sm sm:drop-shadow-none sm:bg-transparent bg-slate-300/15"} `}></div>
       <div className="z-20 flex items-center">
         <p className=" sm:text-[32px] font-semibold drop-shadow-md filter-none ">PORTFOLIO</p>
       </div>

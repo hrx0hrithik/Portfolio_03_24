@@ -35,7 +35,6 @@ const Contact = ({ isMobile }) => {
       let redirectUrl = '';
 
       const domain = getEmailDomain(formUserEmail);
-      console.log(domain)
       switch (domain) {
         case 'gmail.com':
         case 'google.com':
@@ -51,7 +50,6 @@ const Contact = ({ isMobile }) => {
           redirectUrl = `https://mail.${domain}`;
           break;
       }
-      console.log(redirectUrl)
 
       const subjectEncoded = encodeURIComponent(subject);
       const messageEncoded = encodeURIComponent(
@@ -68,13 +66,13 @@ Regards,
 ${formUsername}`
       );
       const emailUrl = `${redirectUrl}&to=${recipient}&subject=${subjectEncoded}&body=${messageEncoded}`;
-      console.log(emailUrl)
       window.open(emailUrl, '_blank');
     }
   };
 
   return (
     <section id='contact' className='sm:min-h-[80vh] my-3 relative overflow-hidden'>
+      <Suspense fallback={<div> Loading Contact Me ...</div>} >
       <div className=" absolute inset-0 z-0 dark:block hidden">
         <Canvas>
           <Stars radius={100} depth={100} count={5000} factor={5} saturation={0} fade speed={2} />
@@ -140,14 +138,13 @@ ${formUsername}`
           </form>
         </div>
         {isMobile ? null :
-          <>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
               <GlobeNew isMobile={isMobile} />
-            </Suspense>
-          </>
+          </Suspense>
         }
 
       </div>
+      </Suspense>
     </section>
   );
 };

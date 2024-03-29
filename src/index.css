@@ -11,6 +11,22 @@ body {
     overflow-x: hidden;
 }
 
+.orange-text {
+  color: #f12711; 
+}
+
+.green-text {
+  color: #11998e; 
+}
+
+.blue-text {
+  color: #56ccf2; 
+}
+
+.pink-text {
+  color: #ec008c; 
+}
+
 @font-face {
     font-family: Outfit;
     src: url(../src/assets/fonts/Outfit.ttf);
