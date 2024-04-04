@@ -7,6 +7,8 @@ import Footer from "./components/Footer"
 
 import Home from "./pages/Home"
 import About from "./pages/About"
+import ToTopBtn from "./components/mobile_buttons/ToTopBtn";
+import LinkedInBtn from "./components/mobile_buttons/LinkedInBtn";
 
 const Experience = lazy(() => import("./pages/Experience"));
 const Projects = lazy(() => import("./pages/Projects"));
@@ -15,6 +17,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 function App() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const [isDarkTheme, setIsDarkTheme] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -86,9 +89,15 @@ function App() {
             <hr className=" dark:opacity-15 " />
             <Projects />
             <hr className=" dark:opacity-15 " />
-              <Contact isMobile = {isMobile} />
+            <Contact isMobile={isMobile} />
           </main>
         </section>
+        {isMobile &&
+          <>
+            <LinkedInBtn />
+            <ToTopBtn />
+          </>
+        }
         <Footer />
       </Suspense>
     </>
