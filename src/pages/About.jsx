@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from "framer-motion"
 import AboutImg from '../assets/3d-character-laptop.png'
 

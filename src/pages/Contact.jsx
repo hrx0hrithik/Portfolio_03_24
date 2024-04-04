@@ -2,7 +2,7 @@ import { useState, lazy, Suspense } from 'react';
 import { Stars } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
-const GlobeNew = lazy(() => import('../components/GlobeNew'));
+const GlobeNew = lazy(() => import('../components/globe/GlobeNew'));
 
 const Contact = ({ isMobile }) => {
   const [formUsername, setFormUsername] = useState('');

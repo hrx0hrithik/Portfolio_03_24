@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion"
 
-const ProjectCards = ({ name, description, tags, image, index, source_code_link, hosted_site_link }) => {
+const ProjectCards = ({ name, description, tags, image, image2, index, source_code_link, hosted_site_link }) => {
   const isLeftAligned = index % 2 === 0;
   const bgColors = [
     "bg-gradient-to-b from-sky-50 to-amber-300 border-amber-100 dark:from-slate-900 dark:to-rose-700 dark:border-rose-800 dark:border-t",
@@ -21,8 +21,21 @@ const ProjectCards = ({ name, description, tags, image, index, source_code_link,
         exit={isLeftAligned ? ForLeftMotion : ForRightMotion}
         transition={{ duration: 1.5, delay: 0 }}
         whileInView={{ x: 0 }}
-        className={` sm:w-1/2 flex ${isLeftAligned ? ' justify-start' : 'justify-end'} `}>
+        viewport={{ once: true }}
+        className={` sm:w-1/2 flex ${isLeftAligned ? ' justify-start' : 'justify-end'} relative `}
+      >
         <img src={image} alt={name} className={`max-w-full h-full sm:py-4 py-2 object-scale-down`} />
+        {image2 &&
+          <motion.div
+            initial={{ y: 220, opacity: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className=' absolute bottom-0 right-[12%] max-w-[25%] sm:mb-6'
+          >
+            <img src={image2} alt='mobile' className=' max-w-full inset-0' />
+          </motion.div>
+        }
       </motion.div>
       <div className='px-4 sm:px-8 sm:py-4 bg-transparent relative flex flex-col justify-around sm:w-1/2'>
         <div className=' sm:mt-12 mt-2'>
@@ -30,10 +43,10 @@ const ProjectCards = ({ name, description, tags, image, index, source_code_link,
           <p className=' text-base font-medium '>{description}</p>
           <p className=' py-1 font-semibold'>
             {tags.map((tag) => (
-            <span key={tag.name} className={`text-[14px] pr-2 ${tag.color}`} >
-              #{tag.name}
-            </span>
-          ))}
+              <span key={tag.name} className={`text-[14px] pr-2 ${tag.color}`} >
+                #{tag.name}
+              </span>
+            ))}
           </p>
         </div>
         <div className=' flex justify-center sm:my-0 my-4 sm:h-12 sm:text-xl'>

@@ -30,10 +30,12 @@ body {
 @font-face {
     font-family: Outfit;
     src: url(../src/assets/fonts/Outfit.ttf);
+    font-display: swap;
 }
 @font-face {
     font-family: Quicksand;
     src: url(../src/assets/fonts/Quicksand.ttf);
+    font-display: swap;
 }
 
 @keyframes glow1 {

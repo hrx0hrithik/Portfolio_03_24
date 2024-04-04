@@ -14,6 +14,7 @@ import cpp from "./tech/cpp.svg";
 import celebal from "./company/celebal.jpeg";
 
 import GoYOLO from "./GoYOLO.png";
+import GoYOLO_mobile from "./GoYOLO_mobile.png";
 import WindowsHome from "./WindowsHome.png";
 import PingpongGame from "./PingpongGame.png";
 import PersonalPortfolio from "./PersonalPortfolio.png";
@@ -32,6 +33,7 @@ export {
   cpp,
   celebal,
   GoYOLO,
+  GoYOLO_mobile,
   WindowsHome,
   PingpongGame,
   PersonalPortfolio

@@ -12,6 +12,7 @@ import {
     cpp,
     celebal,
     GoYOLO,
+    GoYOLO_mobile,
     WindowsHome,
     PingpongGame,
     PersonalPortfolio
@@ -101,6 +102,7 @@ const projects = [
         },
       ],
       image: GoYOLO,
+      image2: GoYOLO_mobile,
       source_code_link: "https://github.com/hrx0hrithik/MERN-Hotel-Booking",
       hosted_site_link: "https://fastidious-melba-8feb05.netlify.app/",
     },

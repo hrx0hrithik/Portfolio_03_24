@@ -12,7 +12,8 @@ const Projects = () => {
               key={index} 
               name={project.name} 
               description={project.description} 
-              image={project.image} 
+              image={project.image}
+              image2={project.image2}
               tags={project.tags}
               index={index}
               hosted_site_link={project.hosted_site_link}
