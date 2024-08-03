@@ -12,6 +12,7 @@ import typescript from "./tech/typescript.svg";
 import cpp from "./tech/cpp.svg";
 
 import celebal from "./company/celebal.jpeg";
+import anotech from "./company/anotech.jpg";
 
 import GoYOLO from "./GoYOLO.png";
 import GoYOLO_mobile from "./GoYOLO_mobile.png";
@@ -32,6 +33,7 @@ export {
   nextjs,
   cpp,
   celebal,
+  anotech,
   GoYOLO,
   GoYOLO_mobile,
   WindowsHome,
