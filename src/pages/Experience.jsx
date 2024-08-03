@@ -40,7 +40,7 @@ const Experience = ({ isDarkTheme, isMobile }) => {
             </div>
             {/* Skills */}
             <div className=' w-full'>
-                <h1 className=' underline underline-offset-2 mb-4 text-3xl font-semibold text-center'>Skills</h1>
+                <h1 className=' underline underline-offset-2 mb-4 mt-2 text-3xl font-semibold text-center'>Skills</h1>
                 <div className='grid grid-cols-3 gap-y-2 w-full mx-auto items-center justify-items-center sm:hidden'>
                     <div className=' flex flex-col justify-center items-center'>
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 48 48">
