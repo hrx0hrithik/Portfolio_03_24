@@ -12,12 +12,15 @@ const Projects = () => {
               key={index} 
               name={project.name} 
               description={project.description} 
-              image={project.image}
-              image2={project.image2}
+              image={project?.image}
+              image2={project?.image2}
+              mobImg={project?.mobImg}
+              mobImg2={project?.mobImg2}
               tags={project.tags}
               index={index}
               hosted_site_link={project.hosted_site_link}
               source_code_link={project.source_code_link}
+              download_app={project.download_app}
              />
           ))}
         </div>

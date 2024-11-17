@@ -10,6 +10,7 @@ import {
   git,
   nextjs,
   cpp,
+  reactNative,
   celebal,
   anotech,
   GoYOLO,
@@ -17,6 +18,9 @@ import {
   WindowsHome,
   PingpongGame,
   PersonalPortfolio,
+  NotesApp,
+  NotesAppDark,
+  NotesAppLight,
 } from "../assets"
 
 const technologies = [
@@ -53,12 +57,16 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Git",
-    icon: git,
+    name: "React Native",
+    icon: reactNative,
   },
   {
     name: "Next JS",
     icon: nextjs,
+  },
+  {
+    name: "Git",
+    icon: git,
   },
   {
     name: "C++",
@@ -177,6 +185,20 @@ const projects = [
     image: PersonalPortfolio,
     source_code_link: "https://github.com/hrx0hrithik/Portfolio_03_24",
     hosted_site_link: "#",
+  },
+  {
+    name: "Google Notes Clone",
+    description: "Google Notes clone app with CRUD operation on local database",
+    tags: [
+      {
+        name: "reactnative",
+        color: "pink-text",
+      },
+    ],
+    mobImg: NotesAppLight,
+    mobImg2: NotesAppDark,
+    source_code_link: "https://github.com/hrx0hrithik/reactNative_KeepNotes",
+    download_app: "#",
   },
 ]
 
